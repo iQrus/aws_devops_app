@@ -1,6 +1,7 @@
 package com.fullstack.devops.controller;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.fullstack.devops.exception.RecordNotFoundException;
+import com.fullstack.devops.model.SortByPriority;
 import com.fullstack.devops.model.User;
 import com.fullstack.devops.repository.UserRepository;
 
@@ -32,6 +34,7 @@ public class UserController {
 		List<User> list = new ArrayList<>();
 		repository.findAll().forEach(list::add);
 		System.out.println(list);
+		Collections.sort(list, new SortByPriority());
 		model.addAttribute("users", list);
 		return "list-users";
 	}

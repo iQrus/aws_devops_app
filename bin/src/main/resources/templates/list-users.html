@@ -20,17 +20,17 @@
 				<div th:switch="${users}" class="container my-5">
 					<div class="card bg-secondary">
 						<div class="card-body text-center ">
-							<h6 class="card-text text-white">Check all the Requests !!</h6>
+							<h6 class="card-text text-white">Check all the users !!</h6>
 						</div>
 					</div>
 					<br>
 					<div>
 						<a href="/api/user/add" class="btn btn-success"> <i
-							class="fas fa-user-plus ml-2"> Add Requests </i>
+							class="fas fa-user-plus ml-2"> Add User </i>
 						</a> <a href="/api/user/deleteall" class="btn btn-danger"> <i
 							class="fas fa-user-alt-slash ml-2"></i> <i
 							class="fas fa-user-alt-slash ml-2"></i> <i
-							class="fas fa-user-alt-slash ml-2"> Delete All Requests </i>
+							class="fas fa-user-alt-slash ml-2"> Delete All Users </i>
 						</a>
 					</div>
 					<br>
@@ -42,8 +42,8 @@
 								<thead>
 									<tr>
 										<th>Id</th>
-										<th>Priority</th>
-										<th>Problem</th>
+										<th>First Name</th>
+										<th>Last Name</th>
 										<th>Email</th>
 										<th>Update</th>
 										<th>Delete</th>
